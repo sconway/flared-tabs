@@ -1,4 +1,5 @@
-$base-color: #0f0; 
+@import "vars";
+@import "mixins";
 
 .h-bar { 
   background: $base-color;
@@ -8,39 +9,30 @@ $base-color: #0f0;
 
 .flare-tab-down {
   background: $base-color;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  height: 50px;
+  @include border-radius(0px 0px 10px 10px);
+  height: 30px;
   left: 700px;
   width: 100px;
+  overflow: visible !important;
   position: absolute;
 
   &:before,
   &:after {
-    // border: 1px solid #000;
-    // content: " ";
-    // top: -1px;
-    // height: 6px;
-    // position: absolute;
-    // width: 6px;
     content:"\A";
     border-style: solid;
-    border-width: 10px 15px 10px 0;
-    border-color: transparent #dd4397 transparent transparent;
     position: absolute;
-    left: -15px;
 
   }
 
-  // &:before {
-  //   border-top-right-radius: 6px;
-  //   border-width: 0 1px 1px 0;
-  //   left: -6px;
-  // }
+  &:before {
+    left: -25px;
+    border-width: 0px 28px 27px 0px;
+    border-color: transparent $base-color transparent transparent;
+  }
 
-  // &:after {
-  //   border-top-left-radius: 6px;
-  //   border-width: 0 1px 1px 0;
-  //   right: -6px;
-  // }
+  &:after {
+    right: -25px;
+    border-color: transparent transparent transparent $base-color;
+    border-width: 0px 0 27px 28px;
+  }
 }
