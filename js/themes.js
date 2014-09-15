@@ -1,8 +1,16 @@
 $(document).ready(function() {
 
-	$('#tab-expand').click(function() {
-		$(this).animate({
-			width: "200"
-		}, 500);
+	$('.fly-out').click(function() {
+		// $('.link-box').animate({
+		// 	display: "block"
+		// }, 500);
+    $('.link-box').show(500);
 	});
+
+  $('.link-box').click(function() {
+    $('.fly-out').animate({
+      right: "-225"
+    }, 500);
+  });
+
 });

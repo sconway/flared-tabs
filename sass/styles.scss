@@ -1,38 +1,110 @@
 @import "vars";
 @import "mixins";
 
-.h-bar { 
-  background: $base-color;
-  width: 100%; 
-  height: 50px;
-}
 
-.flare-tab-down {
-  background: $base-color;
-  @include border-radius(0px 0px 10px 10px);
-  height: 30px;
-  left: 700px;
-  width: 100px;
-  overflow: visible !important;
+// .search-box:active, 
+// .search-box:focus { 
+//   background-color: $search-color;
+// }
+
+// .flare-tab-down {
+//   background: $base-color;
+//   @include border-radius(0px 0px 10px 10px);
+//   display: inline;
+//   height: 30px;
+//   left: 700px;
+//   overflow: visible !important;
+//   position: absolute;
+
+//   &:before,
+//   &:after {
+//     content:"\A";
+//     border-style: solid;
+//     position: absolute;
+//     top: 0px;
+//   }
+//   &:before {
+//     left: -25px;
+//     border-width: 0px 28px 27px 0px;
+//     border-color: transparent $base-color transparent transparent;
+//   }
+//   &:after {
+//     right: -25px;
+//     border-color: transparent transparent transparent $base-color;
+//     border-width: 0px 0 27px 28px;
+//   }
+
+//   .search-box {
+//     background-color: $search-color;
+//     display: inline-block;
+//     margin-right: 10px;
+//     width: 1px;
+
+//     &:active,
+//     &:focus {
+//       background-color: $search-color;
+//     }
+//   }
+
+//   .search-icon {
+//     // font-size: 20px;
+
+//     &:hover {
+//       cursor: pointer;
+//     }
+//   }
+// }
+.fly-out {
   position: absolute;
+  right: 0px;
+  top: 140px;
 
-  &:before,
-  &:after {
-    content:"\A";
-    border-style: solid;
-    position: absolute;
+  .flare-tab {
+    background-color: $base-color;
+    @include border-radius(5px 0 0 13px);
+    color: #fff;
+    float: left;
+    height: 90px;
+    width: 40px;
 
+    &:before {
+      border-width: 5px 36px 17px 4px; //0px 40px 27px 0px;
+      border-color: transparent $base-color transparent transparent;
+      content:"\A";
+      border-style: solid;
+      position: absolute;
+      left: 0px;
+      top: 82px;
+    }
+
+    p {
+      @include rotate(-90deg);
+      margin: 0px;
+      position: relative;
+      top: 10px;
+      left: -10px;
+    }
+
+    .question-icon {
+      left:-22px;
+      top:22px;
+    }
   }
 
-  &:before {
-    left: -25px;
-    border-width: 0px 28px 27px 0px;
-    border-color: transparent $base-color transparent transparent;
-  }
+  .link-box {
+    border: 1px solid $base-color;
+    display: none;// hide the box initially, until it slides out
+    height: 165px;
+    float: left;
+    list-style: none;
+    margin: 0px;
+    padding: 20px 0px;
+    width: 225px;
 
-  &:after {
-    right: -25px;
-    border-color: transparent transparent transparent $base-color;
-    border-width: 0px 0 27px 28px;
+    li {
+      padding: 5px 15px;
+    }
   }
 }
+
+
