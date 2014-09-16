@@ -4,7 +4,7 @@ $(document).ready(function() {
 		// $('.link-box').animate({
 		// 	display: "block"
 		// }, 500);
-    $('.link-box').show(500);
+    $('.link-box').toggle(500);
 	});
 
   $('.link-box').click(function() {
