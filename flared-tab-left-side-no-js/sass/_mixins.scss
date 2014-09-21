@@ -1,0 +1,22 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@mixin rotate($degrees) {
+  -webkit-transform: rotate($degrees);
+     -moz-transform: rotate($degrees);
+      -ms-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+
+@mixin prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: 	#{$argument};
+  -moz-#{$name}: 	#{$argument};
+  -o-#{$name}: 		#{$argument};
+  #{$name}: 		#{$argument};
+}
